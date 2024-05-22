@@ -58,7 +58,7 @@ public class ClientsController : ControllerBase
         if (id is < 1)
             throw new BadRequestException(ErrorMessages.IdOutOfRange, nameof(id));
         
-        var clientsIncludeSpecification = new ClientsIncludeSpecification();
+        var clientsIncludeSpecification = new ClientsByIdIncludeSpecification(id);
         var client = await _readEntityRepository.GetAsync(clientsIncludeSpecification, true, cancellationToken);
 
         if (client is null)
@@ -76,10 +76,8 @@ public class ClientsController : ControllerBase
             throw new BadRequestException(ErrorMessages.CantBeNull, nameof(clientDto));
 
         var isExists = await _readEntityRepository.GetAsync(
-            e => e.INN == clientDto.INN ||
-                 e.Name == clientDto.Name,
-            true,
-            cancellationToken);
+            new ClientUniqueSpecification(clientDto.INN, clientDto.Name),
+            true, cancellationToken);
         
         if (isExists is not null)
             throw new BadRequestException(ErrorMessages.EntityAlreadyExists, $"{clientDto.Name}/{clientDto.INN}"); 
@@ -102,10 +100,8 @@ public class ClientsController : ControllerBase
             throw new BadRequestException(ErrorMessages.CantBeNull, nameof(clientDto));
 
         var isExists = await _readEntityRepository.GetAsync(
-            e => e.INN == clientDto.INN ||
-            e.Name == clientDto.Name,
-            true,
-            cancellationToken);
+            new ClientUniqueSpecification(clientDto.INN, clientDto.Name),
+            true, cancellationToken);
         
         if (isExists is not null)
             throw new BadRequestException(ErrorMessages.EntityAlreadyExists, $"{clientDto.Name}/{clientDto.INN}");  
@@ -129,7 +125,7 @@ public class ClientsController : ControllerBase
         var client = await _readEntityRepository.GetByIdAsync(id, true, cancellationToken);
         
         if (client is null)
-            throw new BadRequestException(ErrorMessages.CantBeNull, nameof(client));
+            throw new NotFoundException(nameof(Client), id);
 
         await _entityRepository.DeleteAsync(client, true, cancellationToken);
         
