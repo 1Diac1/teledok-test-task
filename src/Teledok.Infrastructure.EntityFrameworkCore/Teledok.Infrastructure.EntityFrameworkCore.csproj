@@ -16,8 +16,4 @@
       <ProjectReference Include="..\Teledok.Infrastructure.Abstractions\Teledok.Infrastructure.Abstractions.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Specifications\" />
-    </ItemGroup>
-
 </Project>
