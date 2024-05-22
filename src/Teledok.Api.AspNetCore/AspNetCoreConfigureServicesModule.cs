@@ -6,6 +6,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Teledok.Api.AspNetCore.Filters;
 using Teledok.Api.AspNetCore.Options;
+using Teledok.Infrastructure.EntityFrameworkCore.Postgresql;
 
 namespace Teledok.Api.AspNetCore;
 
@@ -18,6 +19,8 @@ public static class AspNetCoreConfigureServicesModule
         services.Configure<ApiBehaviorOptions>(options =>
             options.SuppressModelStateInvalidFilter = true);
 
+        services.AddInfrastructureModule(configuration);
+        
         services.AddControllers(options =>
         {
             options.Filters.Add<ApiExceptionFilter>();
