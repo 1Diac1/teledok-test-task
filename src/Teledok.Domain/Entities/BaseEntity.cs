@@ -5,6 +5,6 @@ public abstract class BaseEntity<TKey>
 {
     public virtual TKey Id { get; set; }
 
-    public virtual DateTime CreatedAt { get; set; } = DateTime.Now;
-    public virtual DateTime UpdatedAt { get; set; }
+    public virtual DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public virtual DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 }

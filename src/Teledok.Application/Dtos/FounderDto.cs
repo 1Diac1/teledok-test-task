@@ -6,4 +6,6 @@ public class FounderDto
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string PatronymicName { get; set; }
+    
+    public ClientDto Client { get; set; }
 }

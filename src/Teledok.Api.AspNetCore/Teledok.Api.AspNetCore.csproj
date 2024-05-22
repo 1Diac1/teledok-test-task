@@ -17,6 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Teledok.Application\Teledok.Application.csproj" />
       <ProjectReference Include="..\Teledok.Core\Teledok.Core.csproj" />
       <ProjectReference Include="..\Teledok.Infrastructure.EntityFrameworkCore.Postgresql\Teledok.Infrastructure.EntityFrameworkCore.Postgresql.csproj" />
     </ItemGroup>

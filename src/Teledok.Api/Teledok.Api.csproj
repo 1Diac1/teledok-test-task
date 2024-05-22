@@ -21,6 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Teledok.Api.AspNetCore\Teledok.Api.AspNetCore.csproj" />
+      <ProjectReference Include="..\Teledok.Application\Teledok.Application.csproj" />
     </ItemGroup>
 
 </Project>

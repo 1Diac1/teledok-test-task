@@ -13,6 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Teledok.Core\Teledok.Core.csproj" />
       <ProjectReference Include="..\Teledok.Infrastructure.Abstractions\Teledok.Infrastructure.Abstractions.csproj" />
     </ItemGroup>
 

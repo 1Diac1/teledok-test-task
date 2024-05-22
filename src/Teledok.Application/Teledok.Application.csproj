@@ -14,6 +14,9 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Teledok.Domain\Teledok.Domain.csproj" />
+      <ProjectReference Include="..\Teledok.Infrastructure.Abstractions\Teledok.Infrastructure.Abstractions.csproj" />
+      <ProjectReference Include="..\Teledok.Infrastructure.EntityFrameworkCore.Postgresql\Teledok.Infrastructure.EntityFrameworkCore.Postgresql.csproj" />
+      <ProjectReference Include="..\Teledok.Infrastructure.EntityFrameworkCore\Teledok.Infrastructure.EntityFrameworkCore.csproj" />
     </ItemGroup>
 
 </Project>
