@@ -8,5 +8,5 @@ public class Founder : BaseEntity<int>
     public string? PatronymicName { get; set; }
 
     public int ClientId { get; set; }
-    public Client Client { get; set; }
+    public Client? Client { get; set; }
 }
