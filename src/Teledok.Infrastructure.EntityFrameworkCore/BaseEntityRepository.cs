@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Teledok.Core.Exceptions;
 using Teledok.Domain.Entities;
 using Teledok.Infrastructure.Abstractions.Repositories;
 
@@ -30,8 +31,17 @@ public class BaseEntityRepository<TKey, TEntity, TDbContext> : IEntityRepository
     {
         _dbContext.Set<TEntity>().Entry(entity).State = EntityState.Modified;
 
-        if (autoSave is true)
-            await SaveAsync(cancellationToken);
+        entity.UpdatedAt = DateTime.UtcNow;
+
+        try
+        {
+            if (autoSave is true)
+                await SaveAsync(cancellationToken);
+        }
+        catch (DbUpdateConcurrencyException exception)
+        {
+            throw new BadRequestException("Concurrency conflict detected during update operation", exception);
+        }
     }
 
     public virtual async Task DeleteAsync(TEntity entity, bool autoSave = true, CancellationToken cancellationToken = default)

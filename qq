@@ -1,0 +1,50 @@
+[33mcommit 95647003210e40bcbd065495731dff730818dfe3[m[33m ([m[1;36mHEAD -> [m[1;32mfeat/business-logic[m[33m, [m[1;31morigin/feat/business-logic[m[33m)[m
+Author: Ruslan <@>
+Date:   Wed May 22 15:27:33 2024 +0300
+
+    feat: add dtos & validators for dtos
+
+[33mcommit 3cbab1f7ea2a8e7df658085c4467dbc345c673ef[m
+Author: Ruslan <@>
+Date:   Wed May 22 15:16:03 2024 +0300
+
+    feat: add entities, postgresql, docker-compose
+
+[33mcommit 701d4c35fdd90303770eba2d36d3953074c15bc3[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: ca2661a dae88d5
+Author: Ruslan <82397408+1Diac1@users.noreply.github.com>
+Date:   Wed May 22 14:37:37 2024 +0300
+
+    Merge pull request #1 from 1Diac1/feat/abstractions
+    
+    Feat/abstractions
+
+[33mcommit dae88d523d9d7ee10fb914f32a0d9e8c18495e35[m[33m ([m[1;31morigin/feat/abstractions[m[33m, [m[1;32mfeat/abstractions[m[33m)[m
+Author: Ruslan <@>
+Date:   Wed May 22 14:35:43 2024 +0300
+
+    feat: add filters & swagger ui
+
+[33mcommit 71a2331dcdae7bf42ac1c96624cca35187dee01b[m
+Author: Ruslan <@>
+Date:   Wed May 22 13:29:55 2024 +0300
+
+    feat: add responses & exceptions
+
+[33mcommit c24d278af751c8ec46940caf14274277c29f600c[m
+Author: Ruslan <@>
+Date:   Wed May 22 13:05:42 2024 +0300
+
+    feat: add base repositories realizations
+
+[33mcommit 0f7a01cd470d7060239e1d71e3d75775a87a0df0[m
+Author: Ruslan <@>
+Date:   Wed May 22 12:50:03 2024 +0300
+
+    feat: add base entity & repositories
+
+[33mcommit ca2661a4c56b299dd5aac1071ad491f44ceeacf4[m
+Author: Ruslan <@>
+Date:   Wed May 22 12:38:28 2024 +0300
+
+    feat: add basic project structure

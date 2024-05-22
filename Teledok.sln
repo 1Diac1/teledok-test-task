@@ -18,6 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{210DB878
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledok.Api", "src\Teledok.Api\Teledok.Api.csproj", "{4AFDF98A-F413-4CBB-BD0D-69EB8675A326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledok.Infrastructure.EntityFrameworkCore.Postgresql", "src\Teledok.Infrastructure.EntityFrameworkCore.Postgresql\Teledok.Infrastructure.EntityFrameworkCore.Postgresql.csproj", "{3AE011E1-1F78-4CC5-82DE-FC7E44336FAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledok.Application.IntegrationTests", "tests\Teledok.Application.IntegrationTests\Teledok.Application.IntegrationTests.csproj", "{3D75B2D1-411E-4A6E-B48F-E0ACBE704478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teledok.Application.UnitTests", "tests\Teledok.Application.UnitTests\Teledok.Application.UnitTests.csproj", "{B761D50B-712B-4779-B3C2-0DEF185E3AAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +58,18 @@ Global
 		{4AFDF98A-F413-4CBB-BD0D-69EB8675A326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AFDF98A-F413-4CBB-BD0D-69EB8675A326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AFDF98A-F413-4CBB-BD0D-69EB8675A326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE011E1-1F78-4CC5-82DE-FC7E44336FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE011E1-1F78-4CC5-82DE-FC7E44336FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE011E1-1F78-4CC5-82DE-FC7E44336FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE011E1-1F78-4CC5-82DE-FC7E44336FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D75B2D1-411E-4A6E-B48F-E0ACBE704478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D75B2D1-411E-4A6E-B48F-E0ACBE704478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D75B2D1-411E-4A6E-B48F-E0ACBE704478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D75B2D1-411E-4A6E-B48F-E0ACBE704478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B761D50B-712B-4779-B3C2-0DEF185E3AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B761D50B-712B-4779-B3C2-0DEF185E3AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B761D50B-712B-4779-B3C2-0DEF185E3AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B761D50B-712B-4779-B3C2-0DEF185E3AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F6BFD7CD-BA9E-4252-A466-6F3673D1F4EA} = {C30CAABB-7CF0-4470-A89E-B0F8222FBC39}
@@ -61,5 +79,8 @@ Global
 		{D9E51705-BC6E-4C5A-9613-1432438B8EDF} = {C30CAABB-7CF0-4470-A89E-B0F8222FBC39}
 		{23ACED05-0CB6-42D1-9AC1-E7FB37425E8F} = {C30CAABB-7CF0-4470-A89E-B0F8222FBC39}
 		{4AFDF98A-F413-4CBB-BD0D-69EB8675A326} = {C30CAABB-7CF0-4470-A89E-B0F8222FBC39}
+		{3AE011E1-1F78-4CC5-82DE-FC7E44336FAB} = {C30CAABB-7CF0-4470-A89E-B0F8222FBC39}
+		{3D75B2D1-411E-4A6E-B48F-E0ACBE704478} = {210DB878-B13A-4DB6-AC61-991D87441A60}
+		{B761D50B-712B-4779-B3C2-0DEF185E3AAA} = {210DB878-B13A-4DB6-AC61-991D87441A60}
 	EndGlobalSection
 EndGlobal

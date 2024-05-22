@@ -74,6 +74,18 @@ public class BaseReadEntityRepository<TKey, TEntity, TDbContext> : IReadEntityRe
         return await query.FirstOrDefaultAsync(cancellationToken);
     }
 
+    public virtual async Task<TEntity> GetAsync(ISpecification<TEntity> spec, bool disableTracking = true, CancellationToken cancellationToken = default)
+    {
+        IQueryable<TEntity> query = _dbContext.Set<TEntity>();
+        
+        query = this.ApplySpecification(query, spec);
+
+        if (disableTracking is true)
+            query = query.AsNoTracking();
+
+        return await query.FirstOrDefaultAsync(cancellationToken);
+    }
+
     public virtual async Task<TEntity> GetByIdAsync(TKey id, bool disableTracking = true, CancellationToken cancellationToken = default)
     {
         IQueryable<TEntity> query = _dbContext.Set<TEntity>();
