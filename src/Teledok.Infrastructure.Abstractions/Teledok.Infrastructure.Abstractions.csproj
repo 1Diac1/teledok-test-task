@@ -10,4 +10,10 @@
       <ProjectReference Include="..\Teledok.Domain\Teledok.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Ardalis.Specification">
+        <HintPath>C:\Users\Computer\.nuget\packages\ardalis.specification\7.0.0\lib\net6.0\Ardalis.Specification.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
